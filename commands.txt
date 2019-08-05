@@ -1,0 +1,7 @@
+./gradlew deploynodes
+./build/nodes/runnodes
+
+flow start IssueIOUFlow$Initiator iouValue: 50, otherParty: "O=PartyB,L=New York,C=US"
+flow start PayIOUFlow$Initiator paidValue: 10, linearId: "06c0de07-9ab0-4bbe-b01e-6340c2d00035"
+
+run vaultQuery contractStateType: com.iou.state.IOUState
